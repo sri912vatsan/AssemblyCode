@@ -45,7 +45,7 @@ int 21h
 sub al,30h    ;repeating the above step and getting the number
 mov cl,al
 mov ax,a_real ;putting a_real value in ax so that finally can get the 8 bit number
-mov ch,10h    ;putting 10h in ch so that we can do the 2 digit number multiplication
+mov ch,10d    ;putting 10h in ch so that we can do the 2 digit number multiplication
 mul ch        ; finally getting the 8 bit value perfectly
 add al,cl
 lea bx,a_real
@@ -66,7 +66,7 @@ int 21h
 sub al,30h    ;repeating the above step and getting the number
 mov cl,al
 mov ax,a_imag ;putting a_real value in ax so that finally can get the 8 bit number
-mov ch,10h    ;putting 10h in ch so that we can do the 2 digit number multiplication
+mov ch,10d    ;putting 10h in ch so that we can do the 2 digit number multiplication
 mul ch        ; finally getting the 8 bit value perfectly
 add al,cl
 lea bx,a_imag
@@ -88,7 +88,7 @@ int 21h
 sub al,30h    ;repeating the above step and getting the number
 mov cl,al
 mov ax,b_real ;putting a_real value in ax so that finally can get the 8 bit number
-mov ch,10h    ;putting 10h in ch so that we can do the 2 digit number multiplication
+mov ch,10d    ;putting 10h in ch so that we can do the 2 digit number multiplication
 mul ch        ; finally getting the 8 bit value perfectly
 add al,cl
 lea bx,b_real
@@ -109,7 +109,7 @@ int 21h
 sub al,30h    ;repeating the above step and getting the number
 mov cl,al
 mov ax,b_imag ;putting a_real value in ax so that finally can get the 8 bit number
-mov ch,10h    ;putting 10h in ch so that we can do the 2 digit number multiplication
+mov ch,10d    ;putting 10h in ch so that we can do the 2 digit number multiplication
 mul ch        ; finally getting the 8 bit value perfectly
 add al,cl
 lea bx,b_imag
@@ -172,7 +172,7 @@ je subtraction:
 
 ;IF INPUT==3 do multiplaction
 cmp al,03h
-je multiplaction:
+je multiplication:
     multiplication:
         ;TYPE THE MULTIPLICATION CODE HERE    
 
@@ -192,7 +192,3 @@ je divison:
 
 
 ret
-
-
-
-
