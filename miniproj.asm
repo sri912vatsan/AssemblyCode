@@ -178,11 +178,13 @@ je multiplaction:
 
 
 
-;IF INPUT==4 DO DIVISION
+;IF INPUT==4 DO DIVISION 1 
+
 
 cmp al,04h
 je divison:
-    divison:
+    divison:    
+    
         
 
 
