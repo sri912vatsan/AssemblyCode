@@ -160,7 +160,9 @@ sub al,30h
 cmp al,01h
 je addition:
     addition:
-        ;TYPE THE ADDITION CODE HERE 
+        ;TYPE THE ADDITION CODE HERE
+        
+         
 
 
 ;IF INPUT==2 do subtraction
@@ -168,6 +170,10 @@ cmp al,02h
 je subtraction:
     subtraction:
         ;TYPE THE SUBTRACTION CODE HERE 
+        ;asda
+        
+        ;asds
+        ;sadsda
 
 
 ;IF INPUT==3 do multiplaction
@@ -183,7 +189,31 @@ je multiplication:
 
 cmp al,04h
 je divison:
-    divison:    
+    divison: 
+               ;formula is (ac+bd/c^2+d^2) + (bc-ad/c^2+d^2)
+    mov ax,a_real
+    mul b_real
+    mov cx,ax
+    mov ax,a_imag
+    mul b_imag
+    add cx,ax
+    ;PRINTING THE NUMERATOR
+    xor ax,ax
+    mov ah,ch
+    mov [1200h],256h
+    mov ax, [1200h]
+    mov bx,ax    
+    
+    ;TO GET C^2+D^2
+    mov ax,b_real
+    mul ax
+    mov bx,ax
+    mov ax,b_imag
+    mul ax
+    add bx,ax   
+    
+;    
+       
     
         
 
